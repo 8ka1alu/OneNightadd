@@ -20,7 +20,7 @@ class dowClient(discord.Client):
                 gen = self.commands[s[0]](s[1:], author)
                 if gen != None:
                     for mem, mes in gen:
-                        await self.send_message(self.createDest(mem), mes)
+                        await self.message.send(self.createDest(mem), mes)
         except KeyError:
             pass
 
