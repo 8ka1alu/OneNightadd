@@ -1,8 +1,8 @@
 from dowClient import dowClient
+import os
 
 client = dowClient()
 
-with open('./key', 'r') as f:
-    key = f.read()
+TOKUN = os.environ['DISCORD_BOT_TOKEN']
 
-client.run(key[0:-1])
+client.run(TOKUN)
